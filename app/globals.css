@@ -1,7 +1,44 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+@theme inline{
+  --font-mono: var(--font-jetbrainsMono);
+  --color-piggy: var(--piggy);
+  --color-background: var(--background);
+  --color-primary: var(--primary);
+
+  --container-center: true;
+  --container-padding: 15px;
+
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 960px;
+  --breakpoint-xl: 1200px;
+
+}
+
+:root {
+  --piggy: oklch(81% 0.117 11.638);
+  --background: oklch(1 0 0);
+  --primary: oklch(81% 0.117 11.638);
+}
+
+body {
+  h1 span {
+    color: var(--color-primary);
+  }
+}
+
+@layer base{
+  body {
+     @apply bg-background;
+  }
+}
+
+
+
+/* @custom-variant dark (&:is(.dark));
 
 @theme inline {
   --color-background: var(--background);
@@ -110,13 +147,13 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
-}
+} 
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground ;
   }
-}
+} */
