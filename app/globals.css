@@ -6,8 +6,6 @@
   --color-piggy: var(--piggy);
   --color-background: var(--background);
   --color-primary: var(--primary);
-
-  --container-center: true;
   --container-padding: 15px;
 
   --breakpoint-*: initial;
@@ -24,6 +22,8 @@
   --primary: oklch(81% 0.117 11.638);
 }
 
+
+
 body {
   h1 span {
     color: var(--color-primary);
@@ -33,6 +33,10 @@ body {
 @layer base{
   body {
      @apply bg-background;
+  }
+
+  .container{
+    padding: var(--container-padding)
   }
 }
 
